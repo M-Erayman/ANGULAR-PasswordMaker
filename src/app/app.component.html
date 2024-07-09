@@ -6,8 +6,7 @@
 
         <div class="field">
           <label>Şifre Uzunluğu</label>
-          <input class="input" (change)="modifyLength($event.target.value)" />
-          sasad
+          <input class="input" (keypress)="onlyNumberKey($event) " />
         </div>
 
         <div class="field">

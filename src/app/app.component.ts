@@ -22,6 +22,12 @@ export class AppComponent {
     }
   }
 
+  onlyNumberKey(event: KeyboardEvent) {
+    if (!(event.key >= '0' && event.key <= '9')) {
+      event.preventDefault(); // Sayı dışında bir karakter ise olayı iptal ediyoruz
+    }
+  }
+
   modifyLetters() {
     this.includeLetters = !this.includeLetters;
   }
