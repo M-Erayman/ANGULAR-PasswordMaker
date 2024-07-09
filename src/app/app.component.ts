@@ -60,5 +60,8 @@ export class AppComponent {
       generatedPassword += validchars[index];
     }
     this.password = generatedPassword;
+    console.log(this.includeLetters);
+    console.log(this.includeNumbers);
+    console.log(this.includeSymbols);
   }
 }

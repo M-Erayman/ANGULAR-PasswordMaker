@@ -6,7 +6,11 @@
 
         <div class="field">
           <label>Şifre Uzunluğu</label>
-          <input class="input" (keypress)="onlyNumberKey($event) " />
+          <input
+            class="input"
+            (change)="modifyLength($event.target.value)"
+            (keypress)="onlyNumberKey($event)"
+          />
         </div>
 
         <div class="field">
@@ -49,7 +53,7 @@
 
         <div class="box">
           <label>Şifreniz</label>
-          <input class="input" [value]="password" />
+          <input class="input" [value]="password" readonly />
         </div>
       </div>
     </div>
